@@ -33,7 +33,7 @@ tasks:
     output:
       mode: "bot"
       bot_token: "123456:ABCDEF"
-      target: -1001419092328
+      target: "@news_target"
       target_title: "Private Security Channel"
     filters:
       mode: "or"
