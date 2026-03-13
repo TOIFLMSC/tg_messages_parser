@@ -1,0 +1,40 @@
+telegram:
+  api_id: 123456
+  api_hash: "your_api_hash"
+  session_name: "tg_filter_worker"
+
+storage:
+  state_dir: "./state"
+  hash_ttl_hours: 24
+  cleanup_interval_minutes: 10
+
+runtime:
+  default_interactive_task_selection: true
+  debug: false
+tasks:
+  - name: "news_scan"
+    enabled: true
+    interval_seconds: 1
+    sources:
+      - "@channel_one"
+    output:
+      mode: "user"
+      target: "@news_target"
+      target_title: "News Target"
+    filters:
+      mode: "or"
+      keywords: ["vpn"]
+
+  - name: "security_scan"
+    enabled: true
+    interval_seconds: 3
+    sources:
+      - "@sec_channel"
+    output:
+      mode: "bot"
+      bot_token: "123456:ABCDEF"
+      target: -1001419092328
+      target_title: "Private Security Channel"
+    filters:
+      mode: "or"
+      keywords: ["cve"]

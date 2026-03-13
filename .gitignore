@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Testing / tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Project config with secrets
+config.yaml
+.env
+.env.*
+!.env.example
+
+# Telethon sessions
+*.session
+*.session-journal
+
+# Local runtime state
+state/
+logs/
+
+# Local temp/debug
+tmp/
+temp/
+*.log
+
+# Optional local notes
+notes/
+scratch/
+prompts/
+
